@@ -1,0 +1,32 @@
+body {
+    font-family: "Roboto",sans-serif;
+}
+
+main {
+    color: white;
+}
+
+.nav-item {
+    margin-right: 15vw;
+}
+
+.car:hover {
+    background-color: white;
+    color: black;
+}
+
+#cars {
+    background-color: grey;
+}
+
+footer {
+    background-color: black;
+    color: white;
+}
+
+footer i {
+    font-size: 3vh;
+    color: white;
+}
+
+

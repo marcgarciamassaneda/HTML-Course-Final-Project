@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audi Homepage</title>
+    <!--google fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <!---font awesome-->
+    <script src="https://kit.fontawesome.com/6adbb352ac.js" crossorigin="anonymous"></script>
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!--custom css-->
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+    <div id="root" class="row m-0 flex-column">
+        <header class="col-12 navbar navbar-expand-lg navbar-light bg-light sticky-top">
+            <nav class="container-fluid row">
+                <div id="icon-container" class="col-1">
+                    <a class="navbar-brand" href="#">
+                        <img src="http://1000marcas.net/wp-content/uploads/2019/12/Audi-logo.png" width="auto" height="50" alt="logo audi">
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#links-container" aria-controls="links-container" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="links-container" class="collapse navbar-collapse row col">
+                    <div class="col-1"></div> <!---spacing-->
+                    <div id="car-links" class="col-9">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">A7</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">A8</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Q7</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Q8</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="forms-links" class="col-2 d-flex justify-content-end">
+                            <a href="#" class="btn btn-outline-primary mx-2" role="button">Log In</a>
+                            <a href="#" class="btn btn-outline-success" role="button">Sign In</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class="col-12 bg-dark text-center border-bottom">
+            <h1 class="m-3">Audi</h1>
+            <h3>Welcome to the future</h3>
+            <div id="cars" class="border m-5 p-5">
+                <div class="row">
+
+                </div>
+                <div class="row border bg-dark">
+                    <h2>A Models</h2>
+                    <div class="col-6 car border-top">
+                        <h4>Audi A7</h4>
+                        <img class="rounded" src="https://www.pngarts.com/files/8/White-Audi-A7-PNG-Image.png" alt="audi A7" height="150">
+                    </div>
+                    <div class="col-6 car border-top">
+                        <h4>Audi A8</h4>
+                        <img class="rounded" src="https://d33cpcpynwss7s.cloudfront.net/wp-content/uploads/2019/11/audi-a8.png" alt="audi A8" height="150">
+                    </div>
+                </div>
+                <div class="row border bg-dark">
+                    <h2>Q Models</h2>
+                    <div class="col-6 car border-top">
+                        <h4>Audi Q7</h4>
+                        <img class="rounded" src="http://assets.stickpng.com/images/580b585b2edbce24c47b2c19.png" alt="audi Q7" height="150">
+                    </div>
+                    <div class="col-6 car border-top">
+                        <h4>Audi Q8</h4>
+                        <img class="rounded" src="https://mychiptuningfiles.com/es/image/models/aaqaYvUTHYK4YWa1QGFwOY4uGgFXI5.png" alt="audi Q8" height="175">
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="col-12">
+            <div class="row my-5">
+                <div class="col-8 d-flex flex-column align-items-center">
+                    <p class="m-2"><b>Follow us on social media!</b></p>
+                    <div class="btn-group col-12 m-2" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-success"><i class="fab fa-instagram"></i></button>
+                        <button type="button" class="btn btn-primary"><i class="fab fa-facebook-square"></i></button>
+                        <button type="button" class="btn btn-info"><i class="fab fa-twitter"></i></button>
+                    </div>
+                </div>
+                <div class="col-4 d-flex justify-content-end align-items-end p-2">
+                    <input class="form-control me-2" type="search" placeholder="Do you need any help?" aria-label="Search">
+                    <button class="btn btn-outline-info mx-2" type="submit"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            <div class="row text-center border-top my-4 py-4">
+                <a href="#" class="text-reset">Return to the top</a>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>
