@@ -6,6 +6,11 @@ main {
     color: white;
 }
 
+.black {
+    color: black;
+}
+
+/*index*/
 .nav-item {
     margin-right: 15vw;
 }
@@ -13,6 +18,7 @@ main {
 .car:hover {
     background-color: white;
     color: black;
+    cursor: pointer;
 }
 
 #cars {
@@ -28,5 +34,62 @@ footer i {
     font-size: 3vh;
     color: white;
 }
+
+.appear-mobile {
+    display: none;
+}
+
+/* responsive*/
+
+@media (max-width: 992px) {
+    #links-container {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: start;
+    }
+
+    .forms-links {
+        display: none!important;
+    }
+
+    .appear-mobile {
+        display: flex;
+    }
+}
+
+@media (min-width: 992px) {
+    header .collapse {
+        display: flex!important;
+    }
+}
+
+@media (max-width: 600px) {
+    .photo-car {
+        height: 15vw;
+    }
+}
+
+/* audi a7*/
+.btn-circle.btn-lg {
+    width: 70px;
+    height: 70px;
+    padding: 10px 16px;
+    border-radius: 35px;
+    font-size: 24px;
+    line-height: 1.33;
+}
+
+.photo-no-padding {
+    padding-left: 0!important;
+    padding-right: 0!important;
+}
+
+.photo-carousel {
+    height: 40vw;
+    width: auto;
+}
+
+
+
 
 
