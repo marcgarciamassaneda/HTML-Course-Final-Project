@@ -65,16 +65,16 @@
             <div id="signin" class="border m-5 p-5">
                 <form class="row g-3">
                     <div class="col-md-6">
-                        <label for="name" class="form-label">Name</label>
-                        <input type="text" class="form-control" id="name" placeholder="Mark" required>
+                        <label for="name" class="form-label">Name*</label>
+                        <input type="text" class="form-control" id="name" placeholder="Mark">
                     </div>
                     <div class="col-md-6">
-                        <label for="surname" class="form-label">Surname</label>
-                        <input type="text" class="form-control" id="surname" placeholder="Adams" required>
+                        <label for="surname" class="form-label">Surname*</label>
+                        <input type="text" class="form-control" id="surname" placeholder="Adams">
                     </div>
                     <div class="col-md-3">
-                        <label for="continent" class="form-label">Continent</label>
-                        <select class="form-select" id="continent" required>
+                        <label for="continent" class="form-label">Continent*</label>
+                        <select class="form-select" id="continent">
                             <option selected disabled value="">Choose...</option>
                             <option>Europe</option>
                             <option>Asia</option>
@@ -84,43 +84,44 @@
                         </select>
                     </div>
                     <div class="col-md-6">
-                        <label for="city" class="form-label">City</label>
-                        <input type="text" class="form-control" id="city" placeholder="London" required>
+                        <label for="city" class="form-label">City*</label>
+                        <input type="text" class="form-control" id="city" placeholder="London">
                     </div>
                     <div class="col-md-3">
-                        <label for="zipcode" class="form-label">Zip Code</label>
-                        <input type="text" class="form-control" id="zipcode" placeholder="17005" required>
+                        <label for="zipcode" class="form-label">Zip Code*</label>
+                        <input type="text" class="form-control" id="zip-code" placeholder="17005">
                     </div>
                     <!--mail-->
                     <div class="col-12">
-                        <label for="mail" class="form-label">Mail</label>
-                        <input type="text" class="form-control" id="mail" placeholder="example@mail.com" required>
+                        <label for="mail" class="form-label">Mail*</label>
+                        <input type="text" class="form-control" id="mail" placeholder="example@mail.com">
                     </div>
                     <!--password-->
                     <div class="col-md-6">
-                        <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password" required>
+                        <label for="password" class="form-label">Password*</label>
+                        <input type="password" class="form-control" id="password">
                     </div>
                     <div class="col-md-6">
-                        <label for="rptpassword" class="form-label">Repeat the Password</label>
-                        <input type="password" class="form-control" id="rptpassword" required>
+                        <label for="rptpassword" class="form-label">Repeat the Password*</label>
+                        <input type="password" class="form-control" id="rptpassword">
                     </div>
                     <div class="col-12">
                         <div class="form-check text-start">
-                            <input class="form-check-input" type="checkbox" value="" id="terms" required>
+                            <input class="form-check-input" type="checkbox" id="terms">
                             <label class="form-check-label" for="terms">
-                                Agree to Terms & Conditions
+                                Agree to Terms & Conditions*
                             </label>
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="form-check text-start">
-                            <input class="form-check-input" type="checkbox" value="" id="more-info">
+                            <input class="form-check-input" type="checkbox" id="more-info">
                             <label class="form-check-label" for="more-info">
                                 I want to receive news about the newest products
                             </label>
                         </div>
                     </div>
+                    <p class="text-start">* Required</p>
                     <div class="col-12">
                         <button id="sign-in-button" class="btn btn-dark" type="submit">Sign In</button>
                     </div>
