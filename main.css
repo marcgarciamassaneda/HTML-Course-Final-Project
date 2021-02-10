@@ -1,5 +1,11 @@
+html {
+    height: 100%;
+}
+
 body {
+    min-height: 100%;
     font-family: "Roboto",sans-serif;
+    background-color: black;
 }
 
 main {
@@ -10,7 +16,7 @@ main {
     color: black;
 }
 
-/*index*/
+/* index */
 .nav-item {
     margin-right: 15vw;
 }
@@ -26,7 +32,6 @@ main {
 }
 
 footer {
-    background-color: black;
     color: white;
 }
 
@@ -39,7 +44,7 @@ footer i {
     display: none;
 }
 
-/* responsive*/
+/* responsive */
 
 @media (max-width: 992px) {
     #links-container {
@@ -69,7 +74,7 @@ footer i {
     }
 }
 
-/* audi a7*/
+/* cars pages */
 .btn-circle.btn-lg {
     width: 70px;
     height: 70px;
@@ -89,7 +94,11 @@ footer i {
     width: auto;
 }
 
+/* login and signin */
 
-
+#signin, #login {
+    background-color: cornsilk;
+    color: black;
+}
 
 
