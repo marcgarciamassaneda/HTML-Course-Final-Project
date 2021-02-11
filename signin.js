@@ -1,8 +1,8 @@
 var url = "https://selfbuilt-audi-store.herokuapp.com/users";
 
-var newUsers = (users, newData) => {
+var obj = newData => {
     var newUser = {
-        "name": newData[0].val(),
+        "id": newData[0].val(),
         "surname": newData[1].val(),
         "continent": newData[2].val(),
         "city": newData[3].val(),
@@ -12,8 +12,7 @@ var newUsers = (users, newData) => {
         // newData[7] es tambe el password
         "news": newData[8].is(":checked"),
       };
-    users.push(newUser);
-    return users;
+    return newUser;
 }
 
 $(window).on("load",  async () => {
@@ -68,9 +67,9 @@ $(window).on("load",  async () => {
             }
             // si tot es correcte guardem les dades a la api
             else {
-                var newUsersArray = newUsers(users.data, [...requiredInfo, moreInfo]);
-                console.log(newUsersArray);
-                axios.post(url, newUsersArray[1]);
+                var newUser = obj([...requiredInfo, moreInfo]); // obj con los datos del nuevo usuario
+                console.log(newUser);
+                await axios.post(url, newUser);
                 alert("User saved! Now you can log in with it.");
             }
         } catch (error) {
