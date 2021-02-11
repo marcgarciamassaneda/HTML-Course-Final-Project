@@ -1,4 +1,4 @@
-var url = 'https://curso-jedi-web.herokuapp.com/pokemons';
+var url = "https://selfbuilt-audi-store.herokuapp.com/users";
 
 $(window).on("load",  async () => {
     var name, surname, continent, city, zipCode, mail, password, rptPassword, terms, moreInfo; // info de base de dades
@@ -45,7 +45,7 @@ $(window).on("load",  async () => {
                 return;
             }
             else {
-                
+
             }
         } catch (error) {
             console.log(error);
