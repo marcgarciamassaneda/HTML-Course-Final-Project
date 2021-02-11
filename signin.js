@@ -1,9 +1,31 @@
 var url = "https://selfbuilt-audi-store.herokuapp.com/users";
 
+var newUsers = (users, newData) => {
+    var newUser = {
+        "name": newData[0].val(),
+        "surname": newData[1].val(),
+        "continent": newData[2].val(),
+        "city": newData[3].val(),
+        "zip_code": newData[4].val(),
+        "mail": newData[5].val(),
+        "password": newData[6].val(),
+        // newData[7] es tambe el password
+        "news": newData[8].is(":checked"),
+      };
+    users.push(newUser);
+    return users;
+}
+
 $(window).on("load",  async () => {
-    var name, surname, continent, city, zipCode, mail, password, rptPassword, terms, moreInfo; // info de base de dades
+    try {
+        var users = await axios.get(`${url}`);
+    } catch (error) {
+        console.log(err);
+    }
+
     $('#sign-in-button').on("click", async () => {
         try {
+            var name, surname, continent, city, zipCode, mail, password, rptPassword, terms, moreInfo; // info de base de dades
             name = $("#name");
             surname = $("#surname");
             continent = $("#continent");
@@ -44,8 +66,12 @@ $(window).on("load",  async () => {
                 alert("The passwords must match!");
                 return;
             }
+            // si tot es correcte guardem les dades a la api
             else {
-
+                var newUsersArray = newUsers(users.data, [...requiredInfo, moreInfo]);
+                console.log(newUsersArray);
+                axios.post(url, newUsersArray[1]);
+                alert("User saved! Now you can log in with it.");
             }
         } catch (error) {
             console.log(error);
