@@ -1,14 +1,7 @@
 {
     "users": [
         {
-            "id" : "Marc",
-            "surname" : "Garcia",
-            "continent" : "Europe",
-            "city" : "Girona",
-            "zip_code" : "17005",
-            "mail" : "marcgarcia@mail.com",
-            "password" : "marcgarcia",
-            "news" : true
+            
         }
     ]
 }
