@@ -2,12 +2,12 @@ var url = "https://selfbuilt-audi-store.herokuapp.com/users";
 
 var obj = newData => {
     var newUser = {
-        "id": newData[0].val(),
+        "id": newData[5].val(), // mail perque no es repeteixi
+        "nom" : newData[0].val(),
         "surname": newData[1].val(),
         "continent": newData[2].val(),
         "city": newData[3].val(),
         "zip_code": newData[4].val(),
-        "mail": newData[5].val(),
         "password": newData[6].val(),
         // newData[7] es tambe el password
         "news": newData[8].is(":checked"),
@@ -16,18 +16,11 @@ var obj = newData => {
 }
 
 $(window).on("load",  async () => {
-    try {
-        await axios.post(url, {"id" : "Lourdes", "surname" : "Massandes"})
-        var users = await axios.get(url);
-        console.log(users);
-    } catch (error) {
-        console.log(err);
-    }
-    $('#form').on("submit", async () => {
+    
+    $('#form').on("submit", async (event) => {
+        event.preventDefault();
         try {
-            var users = await axios.get(`${url}`);
-            console.log(users);
-            var name, surname, continent, city, zipCode, mail, password, rptPassword, terms, moreInfo; // info de base de dades
+            var name, surname, continent, city, zipCode, mail, password, rptPassword, terms, moreInfo; // info de un usuari
             name = $("#name");
             surname = $("#surname");
             continent = $("#continent");
@@ -70,9 +63,16 @@ $(window).on("load",  async () => {
             }
             // si tot es correcte guardem les dades a la api
             else {
-                var newUser = obj([...requiredInfo, moreInfo]); // obj con los datos del nuevo usuario
+                var newUser = obj([...requiredInfo, moreInfo]); // obj amb les dades del nou usuari
                 console.log(newUser);
-                alert("User saved! Now you can log in with it.");
+                try {
+                    await axios.post(url, newUser); // posem el nou usuari a la api
+                    alert("User saved! Now you can log in with it.");
+                    window.location.assign("login.html"); // carreguem la pagina del login
+                } catch (error) { // hi ha hagut un error perque l'email s'ha repetit => es repeteix el camp "id"
+                    alert("This email has already been used! Use another one.")
+                    window.location.reload(); // reiniciem la pagina
+                }
             }
         } catch (error) {
             console.log(error);
