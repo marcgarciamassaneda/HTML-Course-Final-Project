@@ -17,12 +17,11 @@ const login = (users, mail, password) => {
 
 $(window).on("load",  async () => {
     try {
-        var users = await axios.get(`${url}`);
+        var users = await axios.get(url);
     } catch (error) {
         console.log(err);
     }
-
-    $('#log-in-button').on("click", async () => {
+    $('#form').on("submit", async () => {
         try {
             mail = $("#mail");
             password = $("#password");

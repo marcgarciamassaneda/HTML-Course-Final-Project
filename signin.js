@@ -17,13 +17,16 @@ var obj = newData => {
 
 $(window).on("load",  async () => {
     try {
-        var users = await axios.get(`${url}`);
+        await axios.post(url, {"id" : "Lourdes", "surname" : "Massandes"})
+        var users = await axios.get(url);
+        console.log(users);
     } catch (error) {
         console.log(err);
     }
-
-    $('#sign-in-button').on("click", async () => {
+    $('#form').on("submit", async () => {
         try {
+            var users = await axios.get(`${url}`);
+            console.log(users);
             var name, surname, continent, city, zipCode, mail, password, rptPassword, terms, moreInfo; // info de base de dades
             name = $("#name");
             surname = $("#surname");
@@ -69,7 +72,6 @@ $(window).on("load",  async () => {
             else {
                 var newUser = obj([...requiredInfo, moreInfo]); // obj con los datos del nuevo usuario
                 console.log(newUser);
-                await axios.post(url, newUser);
                 alert("User saved! Now you can log in with it.");
             }
         } catch (error) {
