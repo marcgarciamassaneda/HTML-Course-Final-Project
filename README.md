@@ -2,7 +2,7 @@
 
 ## Content
 
-Custom Audi Store created with HTML, CSS and JS. Click to visit the website -> [Custom Audi Store](https://audi-store.netlify.app)
+Custom and responsive Audi Store created with HTML, CSS and JS. Click to visit the website -> [Custom Audi Store](https://audi-store.netlify.app)
 
 It consists of the following pages:
 
